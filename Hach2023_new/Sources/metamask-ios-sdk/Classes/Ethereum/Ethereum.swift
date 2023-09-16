@@ -120,14 +120,14 @@ extension Ethereum {
             
             let url = URL(string: deeplink)
             
-            NotificationCenter.default.post(
-                name: NSNotification.Name("urlArda"),
-                object: nil,
-                userInfo: ["value": "\(deeplink)"]
-            )
-                 //  DispatchQueue.main.async {
-                 //      UIApplication.shared.open(url!)
-                 //  }
+        //   NotificationCenter.default.post(
+        //       name: NSNotification.Name("urlArda"),
+        //       object: nil,
+        //       userInfo: ["value": "\(deeplink)"]
+        //   )
+                   DispatchQueue.main.async {
+                       UIApplication.shared.open(url!)
+                   }
         }
     }
 

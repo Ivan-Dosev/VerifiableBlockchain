@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct Hach2023_newApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+    }
+    func initFirebase() {
+                         FirebaseApp.configure()
     }
 }

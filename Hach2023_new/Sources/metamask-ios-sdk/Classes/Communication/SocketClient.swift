@@ -347,15 +347,15 @@ private extension SocketClient {
        print("urlString: \(urlString)")
 
         
-        NotificationCenter.default.post(
-            name: NSNotification.Name("urlDossi"),
-            object: nil,
-            userInfo: ["value": "\(urlString)"]
-        )
+      //  NotificationCenter.default.post(
+      //      name: NSNotification.Name("urlDossi"),
+      //      object: nil,
+      //      userInfo: ["value": "\(urlString)"]
+      //  )
         
-    //  DispatchQueue.main.async {
-    //      UIApplication.shared.open(url)
-    //  }
+      DispatchQueue.main.async {
+          UIApplication.shared.open(url)
+      }
     }
 }
 

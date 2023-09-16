@@ -6,16 +6,37 @@
 //
 
 import SwiftUI
+import web3swift
+import  CryptoKit
 
 struct ContentView: View {
+    
+
+
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            OneView()
+                .tabItem {
+                    Label("University", systemImage: "scroll.fill")
+                }
+
+            TwoView()
+                .tabItem {
+                    Label("Richemont", systemImage: "calendar.badge.clock")
+                }
+            
+            ScanView()
+                .tabItem {
+                    Label("Scanner", systemImage: "arrow.triangle.2.circlepath.camera.fill")
+                }
+            PersonView()
+                .tabItem {
+                    Label("Login", systemImage: "person.circle")
+                }
         }
-        .padding()
+        .tint(.black)
+
     }
 }
 
@@ -24,3 +45,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
